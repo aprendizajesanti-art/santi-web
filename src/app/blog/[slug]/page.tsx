@@ -24,7 +24,11 @@ export async function generateMetadata(
   const { slug } = await props.params;
   const post = await getBlogPost(slug);
   if (!post) return { title: "Artículo no encontrado" };
-  return { title: post.title, description: post.excerpt };
+  return {
+    title: post.title,
+    description: post.excerpt,
+    alternates: { canonical: `/blog/${post.slug}` },
+  };
 }
 
 export default async function PostPage(props: PageProps<"/blog/[slug]">) {
