@@ -120,15 +120,20 @@ export function TestimoniosSection({
 
   return (
     <div>
-      {/* Tarjetas */}
-      <div className="mt-12 grid gap-6 md:grid-cols-3">
-        {items.map((t, i) => {
-          const tc = colorMap[CYCLE[i % CYCLE.length]];
-          return (
-            <figure
-              key={t.id ?? `${t.name}-${i}`}
-              className="flex h-full flex-col rounded-none border border-line bg-white p-6 shadow-soft"
-            >
+      {/* Carrusel de tarjetas (se mueve solo, se pausa al pasar el mouse) */}
+      <div className="marquee-mask mt-12">
+        <div
+          className="marquee-track"
+          style={{ gap: "1.5rem", alignItems: "stretch", animationDuration: "50s" }}
+        >
+          {(items.length > 0 ? [...items, ...items] : []).map((t, i) => {
+            const tc = colorMap[CYCLE[i % CYCLE.length]];
+            return (
+              <figure
+                key={`${t.id ?? t.name}-${i}`}
+                aria-hidden={i >= items.length}
+                className="flex w-[20rem] shrink-0 flex-col rounded-none border border-line bg-white p-6 shadow-soft"
+              >
               <div className="flex items-center justify-between">
                 <span className={`font-display text-5xl leading-none ${tc.text}`} aria-hidden>
                   &ldquo;
@@ -154,9 +159,10 @@ export function TestimoniosSection({
                   {t.role && <span className="block text-xs text-ink-muted">{t.role}</span>}
                 </span>
               </figcaption>
-            </figure>
-          );
-        })}
+              </figure>
+            );
+          })}
+        </div>
       </div>
 
       {/* CTA + formulario */}

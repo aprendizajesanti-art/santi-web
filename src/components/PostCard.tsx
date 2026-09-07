@@ -26,7 +26,7 @@ export function PostCard({ post }: { post: CardPost }) {
       <div className={`relative aspect-[16/9] overflow-hidden bg-gradient-to-br ${c.gradient}`}>
         {post.cover ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={post.cover} alt="" className="h-full w-full object-cover" />
+          <img src={post.cover} alt={post.title} className="h-full w-full object-cover" />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">
             <span className="font-display text-2xl font-extrabold text-white/85">SANTI</span>

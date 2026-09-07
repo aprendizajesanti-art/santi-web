@@ -55,7 +55,7 @@ export default async function HomePage() {
       {/* ===================== HERO ===================== */}
       <section className="relative">
         <h1 className="sr-only">
-          Neuropsicología y Terapias — SANTI. Personas ayudando personas.
+          Neuropsicología y Terapias SANTI para niños, adolescentes y adultos en Lima.
         </h1>
         {hasSlides ? (
           <HeroCarousel slides={heroSlides} />

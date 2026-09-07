@@ -48,7 +48,7 @@ export const valueProps: {
     icon: "handHeart",
   },
   {
-    title: "Intervención basada en evidencia",
+    title: "Progreso medible y transparente",
     text: "Medimos el avance con una metodología orientada a datos que registra el progreso de forma continua y transparente, semana a semana.",
     color: "sky",
     icon: "chart",

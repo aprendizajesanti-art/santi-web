@@ -27,7 +27,7 @@ export function ServiceCard({ service }: { service: ServiceCardData }) {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={service.image}
-          alt=""
+          alt={service.title}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>

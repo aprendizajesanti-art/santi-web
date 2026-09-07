@@ -30,7 +30,7 @@ const lato = Lato({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.fullName} · Terapias basadas en evidencia`,
+    default: `${site.fullName} · Lima, Perú`,
     template: `%s · ${site.name}`,
   },
   description: site.description,
