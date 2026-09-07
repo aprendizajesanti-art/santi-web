@@ -61,6 +61,7 @@ export function TestimoniosSection({
     sb.from("testimonios_publicos")
       .select("id,name,role,rating,quote")
       .eq("segment", segment)
+      .eq("approved", true)
       .order("created_at", { ascending: false })
       .then(({ data }) => {
         if (data && data.length) setItems([...(data as Testimonio[]), ...seed]);

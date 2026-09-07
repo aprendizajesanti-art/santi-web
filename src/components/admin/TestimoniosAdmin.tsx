@@ -38,17 +38,39 @@ export function TestimoniosAdmin() {
     load();
   }, [load]);
 
-  async function aprobar(id: string) {
-    await sb.from("testimonios_publicos").update({ approved: true }).eq("id", id);
+  async function setAprobado(id: string, approved: boolean) {
+    setError("");
+    const { data, error: err } = await sb
+      .from("testimonios_publicos")
+      .update({ approved })
+      .eq("id", id)
+      .select();
+    if (err) {
+      setError(
+        "No se pudo actualizar: " +
+          err.message +
+          ". Ejecuta supabase/testimonios.sql en Supabase (permisos de moderación).",
+      );
+      return;
+    }
+    if (!data || data.length === 0) {
+      setError(
+        "No se aplicó el cambio (permiso denegado). Ejecuta supabase/testimonios.sql en Supabase.",
+      );
+      return;
+    }
     load();
   }
-  async function ocultar(id: string) {
-    await sb.from("testimonios_publicos").update({ approved: false }).eq("id", id);
-    load();
-  }
+  const aprobar = (id: string) => setAprobado(id, true);
+  const ocultar = (id: string) => setAprobado(id, false);
   async function eliminar(id: string) {
     if (!confirm("¿Eliminar este comentario definitivamente?")) return;
-    await sb.from("testimonios_publicos").delete().eq("id", id);
+    setError("");
+    const { error: err } = await sb.from("testimonios_publicos").delete().eq("id", id);
+    if (err) {
+      setError("No se pudo eliminar: " + err.message);
+      return;
+    }
     load();
   }
 
