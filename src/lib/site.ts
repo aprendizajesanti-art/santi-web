@@ -9,7 +9,7 @@ export const site = {
   slogan: "Personas ayudando personas",
   description:
     "Terapias personalizadas y basadas en evidencia para niños, adolescentes y adultos, con énfasis en neurodivergencia. Centro SANTI, Lima.",
-  url: "https://terapiassanti.com",
+  url: "https://www.terapiassanti.com",
   ruc: "20612402044",
   founded: 2022,
   payments: ["Transferencia bancaria", "Yape", "Plin", "Efectivo"],
