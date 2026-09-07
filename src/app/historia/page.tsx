@@ -4,6 +4,7 @@ import { ButtonLink } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/historia" },
   title: "Nuestra historia",
   description:
     "SANTI nació inspirado en Santiago: un recordatorio de que las terapias se ajustan a cada persona, no al revés. Somos personas ayudando personas.",

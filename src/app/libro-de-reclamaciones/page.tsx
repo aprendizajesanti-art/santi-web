@@ -4,6 +4,7 @@ import { Container, Section } from "@/components/ui/Section";
 import { ReclamacionesForm } from "@/components/ReclamacionesForm";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/libro-de-reclamaciones" },
   title: "Libro de Reclamaciones",
   description:
     "Libro de Reclamaciones virtual de SANTI, conforme al Código de Protección y Defensa del Consumidor (Ley N° 29571 · INDECOPI).",

@@ -9,7 +9,7 @@ export const site = {
   slogan: "Personas ayudando personas",
   description:
     "Brindamos servicios terapéuticos personalizados y basados en evidencia científica para niños, adolescentes y adultos, con especial énfasis en población neurodivergente.",
-  url: "https://santi.pe",
+  url: "https://terapiassanti.com",
   ruc: "20612402044",
   founded: 2022,
   payments: ["Transferencia bancaria", "Yape", "Plin", "Efectivo"],

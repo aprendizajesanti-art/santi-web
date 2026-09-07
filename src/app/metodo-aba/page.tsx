@@ -10,6 +10,7 @@ import { colorMap } from "@/lib/colors";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/metodo-aba" },
   title: "Qué es ABA",
   description:
     "El Análisis Conductual Aplicado (ABA) en SANTI: un enfoque basado en evidencia, humano y ético, para desarrollar habilidades funcionales.",

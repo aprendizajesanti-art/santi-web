@@ -7,6 +7,7 @@ import { getBlogPosts } from "@/lib/blog";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog" },
   title: "Blog para padres",
   description:
     "Recursos, guías y consejos para acompañar el desarrollo de tus hijos en casa. Contenido del equipo de SANTI.",

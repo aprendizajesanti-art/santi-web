@@ -14,8 +14,13 @@ import { getBlogPosts } from "@/lib/blog";
 import { getSiteContent, getGallery } from "@/lib/media";
 import { colorMap } from "@/lib/colors";
 import { site } from "@/lib/site";
+import type { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 /** Fotos del apartado Misión y visión (rotan solas). */
 const misionFotos = [

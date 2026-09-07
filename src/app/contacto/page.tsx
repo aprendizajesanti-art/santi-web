@@ -6,6 +6,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contacto" },
   title: "Reserva tu cita",
   description:
     "Agenda una cita en SANTI. Estamos en Av. Brasil 2730, Pueblo Libre, Lima. Escríbenos por WhatsApp.",

@@ -4,6 +4,7 @@ import { Container, Section } from "@/components/ui/Section";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/privacidad" },
   title: "Política de Privacidad",
   description:
     "Política de privacidad y tratamiento de datos personales de SANTI, conforme a la Ley N° 29733 del Perú.",

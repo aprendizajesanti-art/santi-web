@@ -43,12 +43,23 @@ export const metadata: Metadata = {
     "Lima",
     "Perú",
   ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
   openGraph: {
     title: `${site.fullName}`,
     description: site.description,
+    url: site.url,
     type: "website",
     locale: "es_PE",
     siteName: site.name,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.fullName}`,
+    description: site.description,
   },
 };
 

@@ -4,6 +4,7 @@ import { Container, Section } from "@/components/ui/Section";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/terminos" },
   title: "Términos y Condiciones",
   description: "Términos y condiciones de uso del sitio web de SANTI.",
 };

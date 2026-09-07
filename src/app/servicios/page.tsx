@@ -5,6 +5,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { segments } from "@/lib/content";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/servicios" },
   title: "Nuestros servicios",
   description:
     "SANTI para niños y neurodiversos, y SANTI para jóvenes y adultos. Terapias personalizadas basadas en evidencia.",

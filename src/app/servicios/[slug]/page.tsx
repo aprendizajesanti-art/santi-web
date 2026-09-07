@@ -31,7 +31,11 @@ export async function generateMetadata(
   const { slug } = await props.params;
   const segment = getSegment(slug);
   if (!segment) return { title: "Servicio no encontrado" };
-  return { title: segment.title, description: segment.summary };
+  return {
+    title: segment.title,
+    description: segment.summary,
+    alternates: { canonical: `/servicios/${segment.slug}` },
+  };
 }
 
 export default async function SegmentPage(props: PageProps<"/servicios/[slug]">) {

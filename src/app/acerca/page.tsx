@@ -12,6 +12,7 @@ import { colorMap } from "@/lib/colors";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/acerca" },
   title: "Acerca de SANTI",
   description:
     "Somos un centro neuropsicológico y terapéutico especializado en neurodivergencia. Conoce nuestra esencia, el enfoque ABA y nuestra responsabilidad social.",
