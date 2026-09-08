@@ -69,6 +69,15 @@ export function TestimoniosSection({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [segment]);
 
+  // Abre el formulario automáticamente si la URL trae ?comentar=1 (o #comentar).
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("comentar") === "1" || window.location.hash === "#comentar") {
+      setOpen(true);
+    }
+  }, []);
+
   // Bloquea el scroll del fondo mientras el modal está abierto.
   useEffect(() => {
     if (!open) return;
