@@ -8,7 +8,7 @@ export const site = {
   fullName: "Neuropsicología y Terapias — SANTI",
   slogan: "Personas ayudando personas",
   description:
-    "Terapias personalizadas y basadas en evidencia para niños, adolescentes y adultos, con énfasis en neurodivergencia. Centro SANTI, Lima.",
+    "Terapias personalizadas y basadas en evidencia para niños, adolescentes y adultos, con énfasis en neurodivergencia. Neuropsicología y Terapias - SANTI.",
   url: "https://www.terapiassanti.com",
   ruc: "20612402044",
   founded: 2022,

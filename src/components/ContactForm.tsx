@@ -21,10 +21,10 @@ export function ContactForm() {
     const mensaje = String(form.get("mensaje") ?? "");
 
     const texto = [
-      `¡Hola SANTI! Quiero reservar una cita.`,
+      `¡Hola SANTI! Me gustaría contactarlos.`,
       ``,
       `Nombre: ${nombre}`,
-      servicio && `Servicio de interés: ${servicio}`,
+      servicio && `Motivo de contacto: ${servicio}`,
       telefono && `Teléfono: ${telefono}`,
       mensaje && `Mensaje: ${mensaje}`,
     ]
@@ -61,7 +61,7 @@ export function ContactForm() {
         </div>
         <div>
           <label htmlFor="servicio" className="mb-1.5 block text-sm font-bold text-ink">
-            Servicio de interés
+            Motivo de contacto
           </label>
           <select id="servicio" name="servicio" className={inputBase} defaultValue="">
             <option value="" disabled>
@@ -74,6 +74,8 @@ export function ContactForm() {
             ))}
             <option value="Consulta inicial">Consulta inicial</option>
             <option value="Evaluación">Evaluación</option>
+            <option value="Prácticas pre profesionales">Prácticas pre profesionales</option>
+            <option value="Quiero ser aliado / convenio">Quiero ser aliado / convenio</option>
             <option value="Aún no estoy seguro/a">Aún no estoy seguro/a</option>
           </select>
         </div>

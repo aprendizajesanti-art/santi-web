@@ -178,22 +178,31 @@ export default async function HomePage() {
       {/* ===================== POR QUÉ SANTI (iconos circulares) ===================== */}
       <Section>
         <Container>
-          <Reveal>
-            <SectionHeading
-              title="Una terapia que se vive dentro y fuera de la sesión"
-              subtitle="Creemos que las habilidades importantes son las que se usan en la vida real. Por eso trabajamos en la persona, su familia y su contexto."
-            />
+          <Reveal className="mx-auto max-w-3xl text-center">
+            <h2 className="text-3xl font-extrabold leading-tight text-ink sm:text-5xl">
+              Una terapia que se vive{" "}
+              <span className="text-gradient">dentro y fuera de la sesión</span>
+            </h2>
+            <p className="mt-5 text-lg leading-relaxed text-ink-soft">
+              Creemos que las habilidades importantes son las que se usan en la vida real.
+              Por eso trabajamos en la persona, su familia y su contexto.
+            </p>
           </Reveal>
-          <div className="mt-14 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
-            {valueProps.map((v, i) => (
-              <Reveal key={v.title} delay={i * 100} className="text-center">
-                <span className={`mx-auto block h-1.5 w-10 rounded-full ${colorMap[v.color].bg}`} />
-                <h3 className="mt-5 text-lg text-ink">{v.title}</h3>
-                <p className="mx-auto mt-2 max-w-xs text-sm leading-relaxed text-ink-soft">
-                  {v.text}
-                </p>
-              </Reveal>
-            ))}
+          <div className="mt-14 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {valueProps.map((v, i) => {
+              const c = colorMap[v.color];
+              return (
+                <Reveal key={v.title} delay={i * 100} className="h-full">
+                  <div className="group flex h-full flex-col overflow-hidden rounded-none border border-line bg-white shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:shadow-card">
+                    <span className={`block h-1.5 ${c.bg}`} />
+                    <div className="flex flex-1 flex-col p-6">
+                      <h3 className="text-lg font-bold text-ink">{v.title}</h3>
+                      <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">{v.text}</p>
+                    </div>
+                  </div>
+                </Reveal>
+              );
+            })}
           </div>
         </Container>
       </Section>
