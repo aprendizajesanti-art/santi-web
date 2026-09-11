@@ -43,6 +43,16 @@ export const metadata: Metadata = {
     "Lima",
     "Perú",
   ],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+      { url: "/icon.png", sizes: "480x480", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/icon.png", sizes: "480x480", type: "image/png" },
+    ],
+  },
   robots: {
     index: true,
     follow: true,
