@@ -83,13 +83,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <noscript>
           <style>{`.reveal{opacity:1!important;transform:none!important}`}</style>
         </noscript>
-        <ImageProtection />
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <HideOnAdmin>
-          <Footer />
-          <WhatsAppFab />
-        </HideOnAdmin>
+dmin>
       </body>
     </html>
   );
