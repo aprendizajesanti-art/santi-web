@@ -5,6 +5,7 @@ import { createClient } from "@/lib/supabase/server";
 import { isSupabaseConfigured } from "@/lib/supabase/config";
 import { formatDate } from "@/lib/posts";
 import { LogoutButton } from "@/components/admin/LogoutButton";
+import { AdminNav } from "@/components/admin/AdminNav";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
@@ -35,7 +36,7 @@ export default async function AdminBlogPage() {
   const drafts = list.length - published;
 
   return (
-    <div className="mx-auto max-w-4xl px-5 py-10">
+    <><AdminNav /><div className="mx-auto max-w-6xl px-5 py-10">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <h1 className="text-2xl text-ink">Blog · Administración</h1>
@@ -92,6 +93,6 @@ export default async function AdminBlogPage() {
           </ul>
         )}
       </div>
-    </div>
+    </div></>
   );
 }

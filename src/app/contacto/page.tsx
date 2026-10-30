@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contacto" },
   title: "Reserva tu cita",
   description:
-    "Agenda una cita en SANTI. Estamos en Av. Brasil 2730, Pueblo Libre, Lima. Escríbenos por WhatsApp.",
+    "Déjanos tus datos y el equipo de SANTI se comunicará contigo. Estamos en Av. Brasil 2730, Pueblo Libre, Lima.",
 };
 
 const contactItems = [
@@ -77,7 +77,7 @@ export default function ContactoPage() {
             <div className="rounded-[2rem] border border-line bg-sky-tint p-7 shadow-soft sm:p-9">
               <h2 className="text-2xl text-ink">Escríbenos</h2>
               <p className="mt-2 text-sm text-ink-soft">
-                Completa el formulario y te contactamos por WhatsApp.
+                Déjanos tus datos y nuestro equipo se pondrá en contacto contigo.
               </p>
               <div className="mt-6">
                 <ContactForm />

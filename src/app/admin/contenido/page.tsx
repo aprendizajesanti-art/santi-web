@@ -6,6 +6,7 @@ import { isSupabaseConfigured } from "@/lib/supabase/config";
 import { LogoutButton } from "@/components/admin/LogoutButton";
 import { SiteContentEditor } from "@/components/admin/SiteContentEditor";
 import { TestimoniosAdmin } from "@/components/admin/TestimoniosAdmin";
+import { AdminNav } from "@/components/admin/AdminNav";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
@@ -53,7 +54,7 @@ export default async function AdminContentPage() {
   }));
 
   return (
-    <div className="mx-auto max-w-3xl px-5 py-10">
+    <><AdminNav /><div className="mx-auto max-w-5xl px-5 py-10">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <h1 className="text-2xl text-ink">Contenido del sitio</h1>
@@ -83,6 +84,6 @@ export default async function AdminContentPage() {
       <div className="mt-10">
         <TestimoniosAdmin />
       </div>
-    </div>
+    </div></>
   );
 }
