@@ -43,7 +43,7 @@ export default function AdminLoginPage() {
         </div>
         <h1 className="mt-6 text-center text-2xl text-ink">Panel de administración</h1>
         <p className="mt-1 text-center text-sm text-ink-soft">
-          Ingresa para gestionar el blog.
+          Ingresa para gestionar las solicitudes, el blog y el contenido del sitio.
         </p>
 
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
